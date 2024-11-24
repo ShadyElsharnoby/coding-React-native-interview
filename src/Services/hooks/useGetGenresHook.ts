@@ -17,8 +17,8 @@ export const useGetGenresHook = () => {
     }));
 
     useEffect(() => {
-        if (data?.length > 0) {
-            saveAllGenres(data);
+        if (data?.genres?.length > 0) {
+            saveAllGenres(data?.genres);
         }
     }, [data, saveAllGenres]);
 };
